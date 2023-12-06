@@ -357,24 +357,7 @@ if __name__ == '__main__':
         #df = df[~df.DGsolv.isna()]
         #print(args.chunk_number)
 
-        #df = pd.read_csv('remaining_after_first_student.csv')
-        #df = pd.read_csv('remaining_after_second_student.csv')
-        #df = pd.read_csv('remaining_after_third_student.csv')
-        #df = pd.read_csv('remaining_after_fourth_student.csv')
-        #df = pd.read_csv('remaining_after_fifth_student.csv')
-        #df = pd.read_csv('remaining_after_sixth_student.csv')
-        #df = pd.read_csv('remaining_after_seventh_student.csv')
-        #df = pd.read_csv('remaining_after_eighth_student.csv')
-        #df = pd.read_csv('remaining_after_ninth_student.csv')
-        #df = pd.read_csv('remaining_after_tenth_student.csv')
-        #df = pd.read_csv('remaining_after_eleventh_student.csv')
-        #df = pd.read_csv('remaining_after_twelfth_student.csv')
-        #df = pd.read_csv('remaining_after_29th_student.csv')
-        #df = pd.read_csv('remaining_after_30th_student.csv')
-        #df = pd.read_csv('remaining_after_34th_student.csv')
-        #df = pd.read_csv('remaining_after_38th_student.csv')
-        #df = pd.read_csv('remaining_after_43rd_student.csv')
-        df = pd.read_csv('remaining_after_40pth_student.csv')
+        df = pd.read_csv('molecules_to_predict.csv')
         #df = pd.read_csv('prediction_for_appl_examples_220927.csv')
         #df = pd.read_csv('solvent-solvent-pred.csv')
         #df = pd.read_csv('prediction_for_appl_examples_221206.csv')
@@ -384,7 +367,7 @@ if __name__ == '__main__':
 
         df2 = predict_df(df,args) 
         #df2.to_csv('prediction_results_control_'+ args.modelname.split('_')[0] +'.csv', index=False)
-        df2.to_csv('prediction_results'+ str(args.chunk_number) +'.csv', index=False)
+        df2.to_csv('molecules_to_predict_results.csv', index=False)
     else:
         import datetime
         start = datetime.datetime.now()
